@@ -123,6 +123,22 @@ function install-build-dependencies()
     fi
 }
 
+#########################################################################
+#                   create-debian-base-system                           #
+#########################################################################
+# DESCRIPTION:                                                          #
+#              Validates the existencie of the DEBIAN_BASE_SYSTEM_DIR   #
+#              directory and creates if doesn't exist.                  #
+#              Creates a Debian Base System File System and puts in the #
+#              directory value of DEBIAN_BASE_SYSTEM_DIR variable       #
+#              Uses the value of DEBIAN_BASE_SYSTEM_DIR and             #
+#              DEBIAN_MIRROR_URL to determine the version and the origin#
+#              packages for the target Debian Base System               #
+#########################################################################
+# PARAMETERS:  N/A                                                      #
+#########################################################################
+# RETURNS:     N/A                                                      #
+#########################################################################
 function create-debian-base-system()
 {
     if [ -d "${DEBIAN_BASE_SYSTEM_DIR}" ]
