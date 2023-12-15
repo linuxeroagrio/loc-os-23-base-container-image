@@ -91,6 +91,18 @@ function validate-execution-user()
     fi
 }
 
+#########################################################################
+#                   install-build-dependencies                          #
+#########################################################################
+# DESCRIPTION:                                                          #
+#              Validate the installation of the buildah,deboostrap,dpkg #
+#              and wget packages, install packages which are not        #
+#              actually installed in the execution host.                #
+#########################################################################
+# PARAMETERS:  N/A                                                      #
+#########################################################################
+# RETURNS:     N/A                                                      #
+#########################################################################
 function install-build-dependencies()
 {
     PACKAGES=""
