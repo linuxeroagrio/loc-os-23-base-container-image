@@ -1,4 +1,4 @@
-# locos-23-base-container-image.sh
+# loc-os-23-base-container-image
 
 This repository helps to build a loc-os 23 Operating System Base Container Image Using Build.
 
