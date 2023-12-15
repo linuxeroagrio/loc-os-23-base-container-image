@@ -12,7 +12,7 @@
 # NAME: loc-os-23-container-base-image.fedora.sh                        #
 # DESCRIPTION: Build a loc-os container image using buildah, debootstrap#
 #              dpkgl and wget. Based on the script which converts a     #
-#              GNU/Linux Debian to Loc-OS
+#              GNU/Linux Debian to Loc-OS                               #
 #########################################################################
 # CHANGE LOG:                                                           #
 # VERSION DATE          AUTHOR                        DESCRIPTION       #
@@ -51,6 +51,17 @@ export LOCOS_KEYRING_URL="${LOCOS_MIRROR_URL}/pool/main/l/loc-os-23-archive-keyr
 export LOCOS_SOURCES_FILE="/etc/apt/sources.list.d/loc-os.list"
 export LOCOS_LPKGBUILD_URL="https://gitlab.com/loc-os_linux/lpkgbuild/-/raw/main/lpkgbuild"
 
+#########################################################################
+#                   validate-execution-os                               #
+#########################################################################
+# DESCRIPTION:                                                          #
+#              Validate if the Operating System is Fedora, exit 1 if    #
+#              not                                                      #
+#########################################################################
+# PARAMETERS:  N/A                                                      #
+#########################################################################
+# RETURNS:     N/A                                                      #
+#########################################################################
 function validate-execution-os()
 {
   if [ "$(grep -w ID /etc/os-release | awk -F'=' '{print $2}')" != "fedora" ]
