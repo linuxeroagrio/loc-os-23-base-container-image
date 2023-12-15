@@ -1,7 +1,44 @@
 #!/bin/bash
+#########################################################################
+#  _      _                                                     _       #
+# | |    (_)                                    /\             (_)      #
+# | |     _ _ __  _   ___  _____ _ __ ___      /  \   __ _ _ __ _  ___  #
+# | |    | | '_ \| | | \ \/ / _ \ '__/ _ \    / /\ \ / _` | '__| |/ _ \ #
+# | |____| | | | | |_| |>  <  __/ | | (_) |  / ____ \ (_| | |  | | (_) |#
+# |______|_|_| |_|\__,_/_/\_\___|_|  \___/  /_/    \_\__, |_|  |_|\___/ #
+#                                                     __/ |             #
+#                                                    |___/              #
+#########################################################################
+# NAME: loc-os-23-container-base-image.fedora.sh                        #
+# DESCRIPTION: Build a loc-os container image using buildah, debootstrap#
+#              dpkgl and wget. Based on the script which converts a     #
+#              GNU/Linux Debian to Loc-OS
+#########################################################################
+# CHANGE LOG:                                                           #
+# VERSION DATE          AUTHOR                        DESCRIPTION       #
+# 1.0     14/DEC/2023   Jorge Varela (@linuxeroagrio) 1st Version       #
+#########################################################################
 
-
-# Environment Variables
+#########################################################################
+#                   ENVIRONMENT VARIABLES                               #
+#########################################################################
+# NAME: DESCRIPTION                                                     #
+# DEBIAN_CODE_NAME:       The codename from Debian Base System          #
+#                         (ex: bookworm)                                #
+# DEBIAN_BASE_SYSTEM_DIR: The direcyory will be place for debian base   #
+#                         system                                        #
+# DEBIAN_MIRROR_URL:      The primary Mirror URL source of the packages #
+#                         debian base system                            #
+# NEW_CONTAINER:          Name of the builder container                 #
+# NEW_CONTAINER_MNT:      Path of the container image mounted in the    #
+#                         host                                          #
+# LOCOS_MIRROR_URL:       Mirror Debian Package Repository for Loc-os   #
+# LOCOS_VERSION:          Loc-os version to build                       #
+# LOCOS_CODENAME:         Loc-os codename from version to build         #
+# LOCOS_KEYRING_URL:      Loc-os Package Repository Keyring Url         #
+# LOCOS_SOURCES_FILE:     Path file for Loc-os Deb Repository           #
+# LOCOS_LPKGBUILD_URL:    URL for lpkbuild script                       #
+#########################################################################
 export DEBIAN_CODE_NAME="bookworm"
 export DEBIAN_BASE_SYSTEM_DIR="/root/debian-${DEBIAN_CODE_NAME}-fs"
 export DEBIAN_MIRROR_URL="http://deb.debian.org/debian"
