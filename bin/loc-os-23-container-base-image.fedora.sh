@@ -268,6 +268,18 @@ EOF
     buildah commit --squash ${NEW_CONTAINER} loc-os:${LOCOS_VERSION}
 }
 
+#########################################################################
+#                            clean-workspace                            #
+#########################################################################
+# DESCRIPTION:                                                          #
+#              Umount the Container Image File System, clean the        #
+#              NEW_CONTAINER_MNT variable, delete the image builder     #
+#              container and delete the Debian Base File System Dir     #
+#########################################################################
+# PARAMETERS:  N/A                                                      #
+#########################################################################
+# RETURNS:     N/A                                                      #
+#########################################################################
 function clean-workspace()
 {
     echo "Umounting Directory ${NEW_CONTAINER_MNT}"
@@ -278,6 +290,9 @@ function clean-workspace()
     rm -rf ${DEBIAN_BASE_SYSTEM_DIR}
 }
 
+#########################################################################
+#                            main flow script                           #
+#########################################################################
 validate-execution-os;
 validate-execution-user;
 install-build-dependencies;
