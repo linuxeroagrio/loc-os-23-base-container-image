@@ -78,12 +78,12 @@ Pull the image
 
 #### Podman
 ```bash
-$ podman pull quay.linuxero-agrio.com.mx/linuxeroagrio/loc-os:23
+$ podman pull quay.linuxero-agrio.com.mx/library/loc-os:23
 ```
 
 #### Docker
 ```bash
-$ docker pull quay.linuxero-agrio.com.mx/linuxeroagrio/loc-os:23
+$ docker pull quay.linuxero-agrio.com.mx/library/loc-os:23
 ```
 
 ## Create a container

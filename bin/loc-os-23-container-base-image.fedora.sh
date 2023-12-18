@@ -252,6 +252,10 @@ EOF
     # Install libeudev1 package
     echo "Installing libeudev1"
     buildah run -t ${NEW_CONTAINER} apt -y install libeudev1
+    
+    # Cleaning systemd packages
+    echo "Cleaning systemd packages"
+    buildah run -t ${NEW_CONTAINER} apt -y purge *systemd*
 
     # Delete cache for apt in the image for storage optimization purpose.
     echo "Cleaning Cache"
