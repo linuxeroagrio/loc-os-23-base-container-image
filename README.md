@@ -30,7 +30,7 @@ Based on the instructions in https://gitlab.com/loc-os_linux/debian12-to-loc-os2
 Clone this git repository
 
 ```bash
-$ git clone https://infra.linuxero-agrio.com.mx/git/linuxero-agrio/loc-os-23-base-container-image.git
+$ git clone https://github.com/linuxeroagrio/loc-os-23-base-container-image.git
 ```
 
 Change to work directory 
