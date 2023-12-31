@@ -78,24 +78,24 @@ Pull the image
 
 #### Podman
 ```bash
-$ podman pull quay.linuxero-agrio.com.mx/library/loc-os:23
+$ podman pull quay.io/linuxeroagrio/loc-os:23
 ```
 
 #### Docker
 ```bash
-$ docker pull quay.linuxero-agrio.com.mx/library/loc-os:23
+$ docker pull quay.io/linuxeroagrio/loc-os:23
 ```
 
 ## Create a container
 
 ### Podman
 ```bash
-$ podman run -ti --rm loc-os:23
+$ podman run -ti --rm quay.io/linuxeroagrio/loc-os:23
 ```
 
 ### Docker
 ```bash
-$ docker run -ti loc-os:23
+$ docker run -ti quay.io/linuxeroagrio/loc-os:23
 ```
 
 ## References
